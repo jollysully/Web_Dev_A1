@@ -19,7 +19,7 @@ export default function Home({data}) {
 
     <NextUIProvider>
         
-        indexxx
+        index
 
     </NextUIProvider>
     
