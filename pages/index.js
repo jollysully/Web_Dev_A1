@@ -58,7 +58,7 @@ export default function Home({data}) {
       alert(`server result: ${result}`)
 
 
-      router.push("/listAllCourses");
+      router.push("/listCourses");
 
 
   
@@ -105,6 +105,11 @@ export default function Home({data}) {
               <Button type="submit" color="secondary" auto>
                 Login
               </Button>
+              <Spacer x={0.5} />
+
+              <Button auto flat as={Link} isActive href="/register">
+            Register
+          </Button>
 
             </form>
 
