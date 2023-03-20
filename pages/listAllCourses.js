@@ -36,14 +36,18 @@ export default function ListAllCourses({data}) {
       <Grid xs={4}>
        
 
-      <Card css={{ h: "$24", $$cardColor: '$colors$primary' }}>
+      <Card css={{ h: "$240", $$cardColor: '$colors$primary' }}>
             <Card.Body>
               <Text h6 size={15} color="white" css={{ mt: 0 }}>
               <tr> 
             <td>ID</td>
+            <Spacer x={2} />
             <td>Title</td>
+            <Spacer x={2} />
             <td>Description</td>
+            <Spacer x={2} />
             <td>NFQ</td>
+            <Spacer x={2} />
             <td>Year</td>
             
             </tr>
