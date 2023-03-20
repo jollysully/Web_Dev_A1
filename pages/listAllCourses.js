@@ -1,4 +1,4 @@
-import { Grid, Card, Text } from "@nextui-org/react";
+import { Grid, Card, Text, Spacer } from "@nextui-org/react";
 import Link from 'next/link'
 
 
@@ -54,10 +54,20 @@ export default function ListAllCourses({data}) {
                         
                         <tr> 
                             <td>{item.id}</td>
+                            <Spacer x={2} />
+                            <Spacer y={0.5} />
                             <td>{item.title}</td>
+                            <Spacer x={2} />
+                            <Spacer y={0.5} />
                             <td>{item.desc}</td>
+                            <Spacer x={2} />
+                            <Spacer y={0.5} />
                             <td>{item.nfq}</td>
+                            <Spacer x={2} />
+                            <Spacer y={0.5} />
                             <td>{item.courseyear}</td>
+                            <Spacer x={2} />
+                            <Spacer y={0.5} />
                             </tr>
                         
                     
