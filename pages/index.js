@@ -58,7 +58,7 @@ export default function Home({data}) {
       alert(`server result: ${result}`)
 
 
-      router.push("/listCourses");
+      router.push("/listAllCourses");
 
 
   

@@ -12,7 +12,7 @@ export default function handler(req, res) {
     host: 'localhost',
     user: 'root',
     password: 'password12',
-    port: 3307,
+    port: 3306,
     database: 'wse'
   });
 
@@ -50,4 +50,4 @@ connection.query(
                 else {res.status(200).json("ok");}
      
   }
-  )} 
+  )}; 
