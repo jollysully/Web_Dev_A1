@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { Input } from "@nextui-org/react";
 import { Button, Grid } from "@nextui-org/react";
 import { NextUIProvider } from "@nextui-org/react"
+
 export default function ViewAll({ data, courseid }) {
 
 
@@ -11,8 +12,7 @@ export default function ViewAll({ data, courseid }) {
 
     // if we want to get a parameter from the URL such as
     // the ID.
-    const { cid } = router.query
-
+    const { id} = router.query
 
 
     return (

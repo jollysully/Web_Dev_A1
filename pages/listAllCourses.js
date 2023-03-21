@@ -78,7 +78,7 @@ export default function ListAllCourses({ data }) {
                         <Table.Cell>{item.nfq} </Table.Cell>
                         <Table.Cell>{item.courseyear} </Table.Cell>
                         <Table.Cell>{item.id} </Table.Cell>
-                        <Table.Cell><Link href="viewAll?id=">View</Link></Table.Cell>
+                        <Table.Cell><Link href={'/viewAll?id=' + item.id}>View</Link></Table.Cell>
                       </Table.Row>
 
 
