@@ -87,7 +87,7 @@ export default function register({data}) {
 
     
 
-        <Container gap={1}>
+        <Container gap={1} css={{ maxWidth: 500 }}>
     
       
               <Spacer y={1} />
@@ -130,6 +130,11 @@ export default function register({data}) {
                         <Link href="http://localhost:3000"color="success">
                           <Button type="submit" color="secondary" auto>Please Login </Button>
                         </Link>
+
+                        <Spacer x={1.5}/>
+
+                        <Input id="telephone" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="telephone" color="secondary" status="secondary"  initialValue="" />
+                        <Spacer y={1.5} />
 
                       </Grid>
                 </Card.Body>
