@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/listAllCourses": "pages/listAllCourses.js"
+  "/listAllCourses": "pages/listAllCourses.js",
+  "/api/listCourses": "pages/api/listCourses.js",
+  "/": "pages/index.js"
 }
