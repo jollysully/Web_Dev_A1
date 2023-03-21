@@ -57,11 +57,9 @@ export default function Home({data}) {
       
       alert(`server result: ${result}`)
 
+      router.push('./listAllCourses')
 
-      
 
-
-  
   }
   
   const router = useRouter()
