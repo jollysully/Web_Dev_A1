@@ -17,44 +17,38 @@ export default function register({data}) {
     
 
        // grab the variables from the form.
-       const firstname = document.querySelector('#firstname').value
+       const Title = document.querySelector('#Title').value
 
-       console.log("firstname is " + firstname);
+       console.log("Title is " + Title);
 
-       const lastname = document.querySelector('#lastname').value
+       const Description = document.querySelector('#Description').value
 
-       console.log("lastname is " + lastname);
+       console.log("Description is " + Description);
 
-       const email = document.querySelector('#email').value
+       const NFQ = document.querySelector('#NFQ').value
 
-       console.log("email is " + email);
+       console.log("NFQ is " + NFQ);
 
-       const address = document.querySelector('#address').value
+       const courseyear = document.querySelector('#courseyear').value
 
-       console.log("address is " + address);
-
-       const telephone = document.querySelector('#telephone').value
-
-       console.log("telephone is " + telephone);
+       console.log("courseyear is " + courseyear);
 
 
 
         // Get data from the form.
         const data = {
-        firstname: event.target.firstname.value,
-        lastname: event.target.lastname.value,
-        email: event.target.email.value,
-        address: event.target.address.value,
-        telephone: event.target.telephone.value,
+          Title: event.target.Title.value,
+          Description: event.target.Description.value,
+          NFQ: event.target.NFQ.value,
+          courseyear: event.target.courseyear.value,
           
-
         }
     
         // Send the data to the server in JSON format.
         const JSONdata = JSON.stringify(data)
     
         // API endpoint where we send form data.
-        const endpoint = '/api/register'
+        const endpoint = '/api/addCourse'
 
 
     
@@ -127,14 +121,13 @@ export default function register({data}) {
                         
                         <Spacer y={1.5}/>
                         </form>
-                        <Link href="http://localhost:3000"color="success">
-                          <Button type="submit" color="secondary" auto>Please Login </Button>
+                        <Link href="http://localhost:3000/addCourse"color="success">
+                          <Button type="submit" color="secondary" auto>Click here for course registration </Button>
                         </Link>
 
                         <Spacer x={1.5}/>
 
-                        <Input id="telephone" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="telephone" color="secondary" status="secondary"  initialValue="" />
-                        <Spacer y={1.5} />
+                        
 
                       </Grid>
                 </Card.Body>
