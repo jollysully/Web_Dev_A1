@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/listAllCourses.js"
+    ],
+    "/viewAll": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/viewAll.js"
     ]
   },
   "ampFirstPages": []
