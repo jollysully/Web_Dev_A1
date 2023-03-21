@@ -49,7 +49,7 @@ export default function ListAllCourses({ data }) {
                   <Table.Column>Title</Table.Column>
                   <Table.Column>Description </Table.Column>
                   <Table.Column>NFQ </Table.Column>
-                  <Table.Column>Year </Table.Column>
+                  <Table.Column>Course Year </Table.Column>
                   <Table.Column>Option </Table.Column>
                 </Table.Header>
                 <Table.Body >
@@ -61,6 +61,7 @@ export default function ListAllCourses({ data }) {
                     <Table.Cell></Table.Cell>
                     <Table.Cell></Table.Cell>
                     <Table.Cell></Table.Cell>
+                    
 
                   </Table.Row>
 
@@ -74,10 +75,11 @@ export default function ListAllCourses({ data }) {
                       <Table.Row key="1">
 
                         <Table.Cell>{item.id} </Table.Cell>
-                        <Table.Cell>{item.desc} </Table.Cell>
+                        <Table.Cell>{item.Title} </Table.Cell>
+                        <Table.Cell>{item.Description} </Table.Cell>
                         <Table.Cell>{item.nfq} </Table.Cell>
                         <Table.Cell>{item.courseyear} </Table.Cell>
-                        <Table.Cell>{item.id} </Table.Cell>
+                        
                         <Table.Cell><Link href={'/viewAll?id=' + item.id}>View</Link></Table.Cell>
                       </Table.Row>
 
