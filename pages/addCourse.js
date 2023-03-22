@@ -29,9 +29,9 @@ export default function addCourse({data}) {
 
        console.log("nfq is " + nfq);
 
-       const courseyear = document.querySelector('#courseyear').value
+       const courseid = document.querySelector('#courseid').value
 
-       console.log("courseyear is " + courseyear);
+       console.log("courseid is " + courseid);
 
        
 
@@ -40,7 +40,7 @@ export default function addCourse({data}) {
             Title: event.target.Title.value,
             Description: event.target.Description.value,
             nfq: event.target.nfq.value,
-            courseyear: event.target.courseyear.value,
+            courseid: event.target.courseid.value,
         }
     
         // Send the data to the server in JSON format.
@@ -62,9 +62,7 @@ export default function addCourse({data}) {
           // Body of the request is the JSON data we created above.
           body: JSONdata,
         }
-
-        
-    
+            
         // Send the form data to our forms API on Vercel and get a response.
         const response = await fetch(endpoint, options)
     
@@ -80,7 +78,7 @@ export default function addCourse({data}) {
       <Card css={{ $$cardColor: '$colors$green300' }}>
             <Card.Body>
               <Text h6 size={15} color="black" css={{ m: 0 }}>
-                Please Register here!
+                Please add course here
               </Text>
                 
                 <Spacer y={2.0} />
@@ -100,7 +98,7 @@ export default function addCourse({data}) {
                     <Input id="nfq" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="nfq" color="secondary" status="secondary"  initialValue="" />
                     <Spacer y={1.5} />
                     
-                    <Input id="courseyear" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="courseyear" color="secondary" status="secondary"  initialValue="" />
+                    <Input id="courseid" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="courseid" color="secondary" status="secondary"  initialValue="" />
                     <Spacer y={1.5} />
   
                     <Button type="submit"  color="gradient" auto ghost > Submit </Button>

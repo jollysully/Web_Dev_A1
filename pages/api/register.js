@@ -24,7 +24,7 @@ export default function handler(req, res) {
     const email = req.body.email;
     const address = req.body.address;
     const telephone = req.body.telephone;
-    const enrolledin = req.body.enrolledin;
+    const sid = req.body.sid;
     
     
 
@@ -33,7 +33,7 @@ export default function handler(req, res) {
     console.log("email is :" + email);
     console.log("address is:" + address);
     console.log("telephone is:" + telephone);
-    console.log("enrolledin is:" + enrolledin);
+    console.log("enrolledin is:" + sid);
     
 
     
@@ -42,7 +42,7 @@ export default function handler(req, res) {
 
 connection.query(
     
-  "INSERT INTO `students` (firstname, lastname, email, address, telephone, enrolledin) VALUES ('"+firstname+"','"+lastname+"','"+email+"','"+address+"','"+telephone+"','"+enrolledin+"');",
+  "INSERT INTO `students` (firstname, lastname, email, address, telephone, sid) VALUES ('"+firstname+"','"+lastname+"','"+email+"','"+address+"','"+telephone+"','"+sid+"');",
   function(err, results, fields)
             {
               //error handler

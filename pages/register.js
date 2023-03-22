@@ -37,9 +37,9 @@ export default function register({data}) {
 
        console.log("telephone is " + telephone);
 
-       const enrolledin = document.querySelector('#enrolledin').value
+       const sid = document.querySelector('#sid').value
 
-       console.log("enrolledin is " + enrolledin);
+       console.log("sid is " + sid);
 
        
 
@@ -50,7 +50,7 @@ export default function register({data}) {
             email: event.target.email.value,
             address: event.target.address.value,
             telephone: event.target.telephone.value,
-            enrolledin: event.target.enrolledin.value,
+            sid: event.target.sid.value,
 
         }
     
@@ -118,7 +118,7 @@ export default function register({data}) {
                     <Input id="telephone" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="telephone" color="secondary" status="secondary"  initialValue="" />
                     <Spacer y={1.5} />
                     
-                    <Input id="enrolledin" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="enrolledin" status="secondary" color="secondary"  initialValue="" />
+                    <Input id="sid" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="Student ID" status="secondary" color="secondary"  initialValue="" />
                     <Spacer y={1.5} />
                    
          
@@ -127,7 +127,7 @@ export default function register({data}) {
                     
                     <Spacer y={1.5}/>
                     </form>
-                    <Link href="http://localhost:3000/addcourse"color="success">
+                    <Link href="http://localhost:3000/addCourse"color="success">
                       <Button type="submit" color="secondary" auto>Add Course </Button>
                     </Link>
 

@@ -2,7 +2,7 @@ export default function getEnrolledStudents(req, res) {
 
     console.log("get enrolled page ID for query " + req.query.id);
 
-    let currentID = req.query.id;
+    let sid = req.query.id;
   
     // get the client
     const mysql = require('mysql2');
@@ -20,7 +20,7 @@ export default function getEnrolledStudents(req, res) {
 });
 
 connection.query(
-    "SELECT * FROM students where enrolledin = '"+currentID+"';",
+    "SELECT * FROM students where sid = '"+sid+"';",
     function(err, results, fields) {
         
         console.log("sending back the results");

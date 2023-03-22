@@ -34,7 +34,7 @@ export default function viewAll({data, courseid}) {
                   <Table.Column>Email </Table.Column>
                   <Table.Column>Address </Table.Column>
                   <Table.Column>Telephone </Table.Column>
-                  <Table.Column>Enrolled in </Table.Column>
+                  <Table.Column>Course ID </Table.Column>
                   
 
                 </Table.Header>
@@ -76,7 +76,7 @@ export default function viewAll({data, courseid}) {
                         <Table.Cell>{item.email} </Table.Cell>
                         <Table.Cell>{item.address} </Table.Cell>
                         <Table.Cell>{item.telephone} </Table.Cell> 
-                        <Table.Cell>{item.enrolledin} </Table.Cell>                        
+                        <Table.Cell>{item.sid} </Table.Cell>                        
                         
                       </Table.Row>
 
@@ -151,15 +151,15 @@ export default function viewAll({data, courseid}) {
 
 export async function getServerSideProps(context) {
     let id = context.query.id;
-    let courseid = context.query.id;
+    let sid = context.query.id;
 
     console.log("current id" + id);
 
-    const res = await fetch(`http://localhost:3000/api/getEnrolledStudents?id=`+id);
+    const res = await fetch(`http://localhost:3000/api/getEnrolledStudents?id=`+sid);
     const data = await res.json()
   
   
     return {
-      props: { data, courseid }, // will be passed to the page component as props
+      props: { data, sid }, // will be passed to the page component as props
     }
   }

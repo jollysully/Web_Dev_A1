@@ -22,20 +22,20 @@ export default function handler(req, res) {
     const Title = req.body.Title;
     const Description = req.body.Description;
     const nfq = req.body.nfq;
-    const courseyear = req.body.courseyear;
+    const courseid = req.body.courseid;
     
 
     console.log("Title is: "+ Title);
     console.log("Description  is: "+ Description);
     console.log("nfq is :" + nfq);
-    console.log("courseyear is:" + courseyear);
+    console.log("courseid is:" + courseid);
     
     // simple query
 ;
 
 connection.query(
     
-  "INSERT INTO `courses` (Title, Description, nfq, courseyear) VALUES ('"+Title+"','"+Description+"','"+nfq+"','"+courseyear+"');",
+  "INSERT INTO `courses` (Title, Description, nfq, courseid) VALUES ('"+Title+"','"+Description+"','"+nfq+"','"+courseid+"');",
   function(err, results, fields)
             {
               //error handler
