@@ -13,52 +13,51 @@ export default function Home({data}) {
     alert("The form was submitted");
        event.preventDefault();
     
-
-       // grab the variables from the form.
        const name = document.querySelector('#username').value
 
        console.log("username is " + name);
+
+       if(!name){
+        alert("Please enter a username to login");
+        return false;
+       }
+
+       if(name.length < 3){
+        alert("Username is to short..")
+        return false;
+       }
 
        const pass = document.querySelector('#password').value
 
        console.log("password is " + pass);
 
-       // Get data from the form.
+      
        const data = {
         username: event.target.username.value,
         password: event.target.password.value,
       }
-  
-      // Send the data to the server in JSON format.
+   
       const JSONdata = JSON.stringify(data)
-  
-      // API endpoint where we send form data.
       const endpoint = '/api/login'
 
-
-  
-      // Form the request for sending data to the server.
       const options = {
-        // The method is POST because we are sending data.
+        
         method: 'POST',
-        // Tell the server we're sending JSON.
+        
         headers: {
           'Content-Type': 'application/json',
         },
-        // Body of the request is the JSON data we created above.
+        
         body: JSONdata,
       }
-      // Send the form data to our forms API on Vercel and get a response.
+      
       const response = await fetch(endpoint, options)
-    
-      // Get the response data from server as JSON.
-      // If server returns the name submitted, that means the form works.
+
       const result = await response.json()
       
       alert(`server result: ${result}`)
 
       router.push('./listAllCourses')
-
 
   }
   
@@ -95,11 +94,12 @@ export default function Home({data}) {
             <form onSubmit={handleSubmit}>
             <Spacer y={0.5} />
 
-            <Input  id="username" clearable bordered labelPlaceholder="Username" initialValue="" />
+            <Input minLength ="3" maxLength={20}  id="username" clearable bordered labelPlaceholder="Username" initialValue="" />
             <Spacer y={2} />
 
-            <Input id="password" clearable bordered labelPlaceholder="Password" initialValue="" />
+            <Input minLength ="3" maxLength={30} id="password" clearable bordered labelPlaceholder="Password" initialValue="" />
             <Spacer y={2} />
+
               <Button type="submit" color="secondary" auto>
                 Login
               </Button>
@@ -110,7 +110,6 @@ export default function Home({data}) {
           </Button>
 
             </form>
-
 
           </Text>
         </Card.Body>
