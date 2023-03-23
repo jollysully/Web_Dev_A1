@@ -67,7 +67,7 @@ const data = {
         <Spacer y={1.5} />
 
 
-        <Card css={{ h: "$100", $$cardColor: '$colors$green300' }}>
+        <Card css={{ w: "$45", h: "$90", $$cardColor: '$colors$green300' }}>
         <Card.Body>
 
             <Textarea
@@ -79,14 +79,14 @@ const data = {
 
             <form onSubmit={handleSubmit}>
             <Spacer y={0.5} />
-
-            <Input  id="username" placeholder="" labelPlaceholder="" width="300px" initialValue="" />
+            Please enter your username...
+            <Input  id="username" placeholder="" labelPlaceholder="" width="300px" initialValue="" style={{ height: "50px",  }} />
             <Spacer y={1.5} />
             Please enter your message...
 
-            <Input id="comment"  placeholder="" labelPlaceholder="" width="300px" initialValue="" />
+            <Input id="comment"  placeholder="" labelPlaceholder="" width="300px" initialValue="" style={{ height: "50px" }} />
             <Spacer y={1.5} />
-              <Button type="submit" size="xs" width="300px" >Send</Button>
+            <Button type="submit" size="xs" width="300px" >Send</Button>
 
             </form>
 
@@ -104,13 +104,6 @@ const data = {
         </NextUIProvider>
 
 
-        
-
-      
-
-
-
-    
 
     )
  }
@@ -118,7 +111,7 @@ const data = {
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://localhost:3000/api/listCourses`)
+  const res = await fetch(`http://localhost:3000/api/saveChat`)
   const data = await res.json()
 
   return {
