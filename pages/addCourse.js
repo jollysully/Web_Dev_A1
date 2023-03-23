@@ -110,10 +110,15 @@ export default function addCourse({data}) {
                     
 
                     </form>
+
+                    <Link href="http://localhost:3000/listAllCourses" color="success">
+                      <Button type="submit" color="secondary" auto>List All Courses</Button>
+                    </Link>
+                    <Spacer y={1.5}/>
                     <Link href="http://localhost:3000/addCourse"color="success">
                       <Button type="submit" color="secondary" auto>Add another Course </Button>
                     </Link>
-
+                    
                   </Grid>
                     
             </Card.Body>

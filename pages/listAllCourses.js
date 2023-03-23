@@ -1,38 +1,15 @@
-import { Grid, Card, Text, Spacer, Table, Button } from "@nextui-org/react";
+import { Grid, Card, Text, Spacer, Table, Button,  } from "@nextui-org/react";
 import { Link } from "@nextui-org/react";
 
 
 
 export default function ListAllCourses({ data }) {
 
- 
-
-
   return (
     <>
-      <Grid.Container gap={2} justify="center">
-        <Grid xs={4}>
-          
-        <Card css={{ h: "$200", $$cardColor: '$colors$green300', w: "fit-content" }}>
-        <Card.Body css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-      
-        <Link href="/addCourse">
-              <Button type="button" color="secondary" auto> Add Course</Button>
-        </Link>
-        <Spacer y={0.5} />
-        <Link href="/register">
-              <Button type="button" color="secondary" auto> Register Student</Button>
-        </Link>
-
-            </Card.Body>
-          </Card>
-        </Grid>
-      </Grid.Container>
-
 
       <Grid.Container gap={2} justify="center">
         <Grid xs={4}>
-
 
         <Card css={{ h: "$240", $$cardColor: '$colors$green300', w: "100%" }}>
             <Card.Body>
@@ -42,9 +19,7 @@ export default function ListAllCourses({ data }) {
                 css={{
                   height: "auto",
                   minWidth: "100%",
-
                 }}
-
               >
                 <Table.Header>
 
@@ -66,13 +41,10 @@ export default function ListAllCourses({ data }) {
                     <Table.Cell></Table.Cell>
                     <Table.Cell></Table.Cell>
                     <Table.Cell></Table.Cell>
-                    
-                    
-
+                                     
                   </Table.Row>
 
                   {
-
                     data &&
                     data.map((item, i) => (
                       // print out the table from the JSON we got
@@ -91,9 +63,7 @@ export default function ListAllCourses({ data }) {
 
                     ))
                   }
-
                   
-
                 </Table.Body>
               </Table>
 
@@ -104,13 +74,29 @@ export default function ListAllCourses({ data }) {
 
       </Grid.Container>
 
+      <Grid.Container gap={2} justify="center">
+        <Grid xs={4}>
+          
+        <Card css={{ h: "$200", $$cardColor: '$colors$green300', w: "fit-content" }}>
+        <Card.Body css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      
+        <Link href="/addCourse">
+              <Button type="button" color="secondary" auto> Add Course</Button>
+        </Link>
+        <Spacer y={0.5} />
+        <Link href="/register">
+              <Button type="button" color="secondary" auto> Register Student</Button>
+        </Link>
 
+            </Card.Body>
+          </Card>
+        </Grid>
+      </Grid.Container>
 
     </>
 
   )
 }
-
 
 export async function getServerSideProps(context) {
   const res = await fetch(`http://localhost:3000/api/listCourses`)
