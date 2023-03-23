@@ -80,15 +80,15 @@ export default function addCourse({data}) {
           <Card css={{ $$cardColor: '$colors$green300' }}>
             <Card.Body>
               <Text h6 size={15} color="black" css={{ m: 0 }}>
-                Please add course here
+                Please add course here:
               </Text>
                 
-                <Spacer y={2.0} />
+                <Spacer y={1.0} />
                 
                 
                 <Grid>
 
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} >
                
    
                     <Input id="Title" size="md" placeholder="Medium" shadow={false} clearable bordered labelPlaceholder="Title" status="secondary" color="secondary"  initialValue="" />                              
