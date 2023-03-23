@@ -76,7 +76,7 @@ export default function viewAll({data, courseid}) {
                         <Table.Cell>{item.email} </Table.Cell>
                         <Table.Cell>{item.address} </Table.Cell>
                         <Table.Cell>{item.telephone} </Table.Cell> 
-                        <Table.Cell>{item.sid} </Table.Cell>                        
+                        <Table.Cell>{item.cid} </Table.Cell>                        
                         
                       </Table.Row>
 

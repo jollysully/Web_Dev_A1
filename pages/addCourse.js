@@ -75,7 +75,9 @@ export default function addCourse({data}) {
     }
 
     return(
-      <Card css={{ $$cardColor: '$colors$green300' }}>
+      <Grid.Container gap={2} justify="center">
+        <Grid xs={4}>
+          <Card css={{ $$cardColor: '$colors$green300' }}>
             <Card.Body>
               <Text h6 size={15} color="black" css={{ m: 0 }}>
                 Please add course here
@@ -109,12 +111,14 @@ export default function addCourse({data}) {
 
                     </form>
                     <Link href="http://localhost:3000/addCourse"color="success">
-                      <Button type="submit" color="secondary" auto>Add Course </Button>
+                      <Button type="submit" color="secondary" auto>Add another Course </Button>
                     </Link>
 
                   </Grid>
                     
             </Card.Body>
           </Card>
+          </Grid>
+        </Grid.Container>
     )
 }

@@ -1,30 +1,32 @@
-import { Grid, Card, Text, Spacer, Table } from "@nextui-org/react";
-import Link from 'next/link';
+import { Grid, Card, Text, Spacer, Table, Button } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 
 
 
 export default function ListAllCourses({ data }) {
 
-  const MockItem = ({ text }) => {
-    return (
-      <Card css={{ h: "$24", $$cardColor: '$colors$primary' }}>
-        <Card.Body>
-          <Text h6 size={15} color="white" css={{ mt: 0 }}>
-            {text}
-          </Text>
-        </Card.Body>
-      </Card>
-    );
-  };
+ 
 
 
   return (
     <>
       <Grid.Container gap={2} justify="center">
         <Grid xs={4}>
-          <MockItem text="1 of 3" />
-        </Grid>
+          
+        <Card css={{ h: "$200", $$cardColor: '$colors$green300', w: "fit-content" }}>
+        <Card.Body css={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      
+        <Link href="/addCourse">
+              <Button type="button" color="secondary" auto> Add Course</Button>
+        </Link>
+        <Spacer y={0.5} />
+        <Link href="/register">
+              <Button type="button" color="secondary" auto> Register Student</Button>
+        </Link>
 
+            </Card.Body>
+          </Card>
+        </Grid>
       </Grid.Container>
 
 
@@ -89,6 +91,8 @@ export default function ListAllCourses({ data }) {
 
                     ))
                   }
+
+                  
 
                 </Table.Body>
               </Table>
