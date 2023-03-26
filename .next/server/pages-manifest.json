@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/saveChat": "pages/api/saveChat.js",
-  "/": "pages/index.js",
-  "/api/getChats": "pages/api/getChats.js",
-  "/chat": "pages/chat.js"
+  "/": "pages/index.js"
 }

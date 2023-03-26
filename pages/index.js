@@ -74,9 +74,7 @@ export default function Home({data}) {
       </Card>
     );
   };
-
-  
-  
+ 
   return (
 
     <NextUIProvider>
