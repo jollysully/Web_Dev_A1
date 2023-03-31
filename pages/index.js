@@ -81,14 +81,14 @@ export default function Home({data}) {
         
         <Grid.Container gap={2} justify="center">
       <Grid xs={4}>
-        <MockItem text="1 of 3" />
+        <MockItem text="" />
       </Grid>
       <Grid xs={4}>
 
       <Card css={{ h: "$240", $$cardColor: '$colors$primary' }}>
         <Card.Body>
           <Text h6 size={15} color="white" css={{ mt: 0 }}>
-            Login to system
+            Login
             <form onSubmit={handleSubmit}>
             <Spacer y={0.5} />
 
@@ -115,7 +115,7 @@ export default function Home({data}) {
 
       </Grid>
       <Grid xs={4}>
-        <MockItem text="3 of 3" />
+        <MockItem text="" />
       </Grid>
     </Grid.Container>
 
