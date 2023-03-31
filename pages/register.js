@@ -88,7 +88,9 @@ export default function register({data}) {
     }
 
     return(
-      <Card css={{ $$cardColor: '$colors$green300' }}>
+      
+      
+      <Card css={{ h: "$240", $$cardColor: '$colors$green300' }}>
             <Card.Body>
               <Text h6 size={15} color="black" css={{ m: 0 }}>
                 Please Register here!
@@ -131,7 +133,11 @@ export default function register({data}) {
                       <Button type="submit" color="secondary" auto>Add Course </Button>
                     </Link>
 
+                    
+
                   </Grid>
+
+                  
                     
 
             </Card.Body>

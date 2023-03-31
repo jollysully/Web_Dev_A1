@@ -80,9 +80,12 @@ export default function Home({data}) {
     <NextUIProvider>
         
         <Grid.Container gap={2} justify="center">
-      <Grid xs={4}>
-        <MockItem text="" />
-      </Grid>
+        <Grid xs={4}>
+      <a href="https://imgs.search.brave.com/mvGTOOFdWxgNV8NuDmUz3gdV7Iq--QBHpfwr1p3VFGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzYw/MC8yNzUvb3JpZ2lu/YWwvdGVjaG5vbG9n/eS1sb2dvLWljb24t/dmVjdG9ycy5qcGcm">
+        <img src="https://imgs.search.brave.com/mvGTOOFdWxgNV8NuDmUz3gdV7Iq--QBHpfwr1p3VFGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzYw/MC8yNzUvb3JpZ2lu/YWwvdGVjaG5vbG9n/eS1sb2dvLWljb24t/dmVjdG9ycy5qcGc" alt="Example Image" />
+      </a>
+    </Grid>
+      
       <Grid xs={4}>
 
       <Card css={{ h: "$240", $$cardColor: '$colors$primary' }}>
@@ -115,8 +118,10 @@ export default function Home({data}) {
 
       </Grid>
       <Grid xs={4}>
-        <MockItem text="" />
-      </Grid>
+      <a href="https://imgs.search.brave.com/mvGTOOFdWxgNV8NuDmUz3gdV7Iq--QBHpfwr1p3VFGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzYw/MC8yNzUvb3JpZ2lu/YWwvdGVjaG5vbG9n/eS1sb2dvLWljb24t/dmVjdG9ycy5qcGcm">
+        <img src="https://imgs.search.brave.com/mvGTOOFdWxgNV8NuDmUz3gdV7Iq--QBHpfwr1p3VFGE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzYw/MC8yNzUvb3JpZ2lu/YWwvdGVjaG5vbG9n/eS1sb2dvLWljb24t/dmVjdG9ycy5qcGc" alt="Example Image" />
+      </a>
+    </Grid>
     </Grid.Container>
 
     </NextUIProvider>

@@ -1,14 +1,18 @@
 import { Grid, Card, Text, Spacer, Table, Button,  } from "@nextui-org/react";
 import { Link } from "@nextui-org/react";
-
+import { NextUIProvider } from '@nextui-org/react';
 
 
 export default function ListAllCourses({ data }) {
 
   return (
-    <>
+    
+
+    <NextUIProvider>
 
       <Grid.Container gap={2} justify="center">
+        
+        
         <Grid xs={4}>
 
         <Card css={{ h: "$240", $$cardColor: '$colors$green300', w: "100%" }}>
@@ -93,7 +97,9 @@ export default function ListAllCourses({ data }) {
         </Grid>
       </Grid.Container>
 
-    </>
+      </NextUIProvider>
+
+    
 
   )
 }

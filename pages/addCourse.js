@@ -76,6 +76,7 @@ export default function addCourse({data}) {
 
     return(
       <Grid.Container gap={2} justify="center">
+        
         <Grid xs={4}>
           <Card css={{ $$cardColor: '$colors$green300' }}>
             <Card.Body>

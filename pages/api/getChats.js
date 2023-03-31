@@ -25,8 +25,10 @@ export default function getchats(req, res) {
         console.log(element);
         buffer = buffer + element;
 
-        res.status(200).json(element);
+        
     });
+
+    res.status(200).json(buffer);
 
 
     
