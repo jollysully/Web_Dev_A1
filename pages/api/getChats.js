@@ -10,30 +10,21 @@ export default function getchats(req, res) {
   async function run() {
     try {
       const database = client.db("courses");
-      const movies = database.collection("chats");
+      const chats = database.collection("chats");
 
-      const query = { };
-      const options = {
+      const query = {};
+      const options = {};
 
-      };
+      const cursor = chats.find(query, options);
 
-      const cursor = movies.find(query, options);
+      let buffer = [];
 
-      let buffer = '';
-
-      cursor.forEach(element => {
+      cursor.forEach((element) => {
         console.log(element);
-        buffer = buffer + element;
+        buffer.push(element);
+      });
 
-        
-    });
-
-    res.status(200).json(buffer);
-
-
-    
-      
-
+      res.status(200).json(JSON.stringify(buffer));
     } finally {
       //await client.close();
     }
@@ -41,7 +32,6 @@ export default function getchats(req, res) {
 
   run().catch(console.dir);
 }
-    
 
 
 //mongodb://root:example@localhost:6666/

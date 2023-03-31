@@ -91,6 +91,10 @@ export default function ListAllCourses({ data }) {
         <Link href="/register">
               <Button type="button" color="secondary" auto> Register Student</Button>
         </Link>
+        <Spacer y={0.5} />
+        <Link href="/chat">
+              <Button type="button" color="secondary" auto> Chat</Button>
+        </Link>
 
             </Card.Body>
           </Card>

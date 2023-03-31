@@ -89,8 +89,9 @@ export default function register({data}) {
 
     return(
       
-      
-      <Card css={{ h: "$240", $$cardColor: '$colors$green300' }}>
+      <Grid.Container gap={2} justify="center">
+        
+      <Card css={{ h: "$240", $$cardColor: '$colors$green300', maxWidth: "300px", marginTop: "20px" }}>
             <Card.Body>
               <Text h6 size={15} color="black" css={{ m: 0 }}>
                 Please Register here!
@@ -133,6 +134,12 @@ export default function register({data}) {
                       <Button type="submit" color="secondary" auto>Add Course </Button>
                     </Link>
 
+                    <Spacer y={1.0}/>
+
+                    <Link href="/chat">
+                      <Button type="button" color="secondary" auto> Chat</Button>
+                    </Link>
+
                     
 
                   </Grid>
@@ -142,5 +149,6 @@ export default function register({data}) {
 
             </Card.Body>
           </Card>
+          </Grid.Container>
     )
 }
